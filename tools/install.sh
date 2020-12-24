@@ -108,16 +108,17 @@ setup_ohmyzsh() {
     exit 1
   fi
 
-  git clone -c core.eol=lf -c core.autocrlf=false \
-    -c fsck.zeroPaddedFilemode=ignore \
-    -c fetch.fsck.zeroPaddedFilemode=ignore \
-    -c receive.fsck.zeroPaddedFilemode=ignore \
-    --depth=1 --branch "$BRANCH" "$REMOTE" "$ZSH" || {
-    fmt_error "git clone of oh-my-zsh repo failed"
-    exit 1
-  }
+  # install local
+  #git clone -c core.eol=lf -c core.autocrlf=false \
+  #  -c fsck.zeroPaddedFilemode=ignore \
+  #  -c fetch.fsck.zeroPaddedFilemode=ignore \
+  #  -c receive.fsck.zeroPaddedFilemode=ignore \
+  #  --depth=1 --branch "$BRANCH" "$REMOTE" "$ZSH" || {
+  #  fmt_error "git clone of oh-my-zsh repo failed"
+  #  exit 1
+  #}
 
-  echo
+  #echo
 }
 
 setup_zshrc() {
